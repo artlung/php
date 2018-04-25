@@ -6,10 +6,11 @@
 
 actor: AcceptanceTester
 modules:
-    enabled:
-#        - PhpBrowser:
-#            url: http://localhost/
-##        - \Helper\Acceptance
-        - WebDriver:
-            url: http://localhost/
-            browser: chrome
+  enabled:
+      - WebDriver
+  config:
+    WebDriver:
+      browser: chrome
+      port: 4444
+      url: "http://localhost"
+      wait: 1 # seconds
