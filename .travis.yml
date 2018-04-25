@@ -36,7 +36,7 @@ before_script:
 script:
   - phpunit --configuration phpunit_$DB.xml --coverage-text --verbose
   # execute codeception tests
-  - php inc/libraries/vendor/codeception/codeception/codecept run --debug
+  - php vendor/codeception/codeception/codecept run --debug
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
