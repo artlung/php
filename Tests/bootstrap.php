@@ -1,7 +1,5 @@
 <?php
 
-require_once ('PHPUnit/Framework/TestCase.php');
-
 function loader($class)
 {
     $file = $class . '.php';
