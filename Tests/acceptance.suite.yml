@@ -11,5 +11,5 @@ modules:
 #            url: http://localhost/
 #        - \Helper\Acceptance
         - WebDriver:
-          url: 'http://localhost'
-          browser: chrome
+            url: 'http://localhost'
+            browser: chrome
