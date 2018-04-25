@@ -1,6 +1,7 @@
 .idea/misc.xml
 .idea/modules.xml
 .idea/php.xml
-.idea/travis-php.xml
+.idea/travis-php.iml
 .idea/vcs.xml
+.idea/workspace.xml
 
