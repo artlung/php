@@ -1,5 +1,7 @@
 <?php
 
+require_once 'PHPUnit/Autoload.php';
+
 function loader($class)
 {
     $file = $class . '.php';
