@@ -15,7 +15,7 @@
             <input name="username" value="" id="username" class="form-control"/>
         </div>
         <div class="form-group">
-            <input type="submit" value="Go" class="btn btn-primary btn-block" />
+            <input type="submit" value="Go" class="btn btn-primary btn-block" id="goButton"/>
         </div>
     </form>
 </div>
