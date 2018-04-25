@@ -1,5 +1,5 @@
 paths:
-    Tests: Tests
+    tests: Tests
     output: Tests/_output
     data: Tests/_data
     support: Tests/_support
