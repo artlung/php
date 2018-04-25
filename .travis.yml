@@ -35,8 +35,6 @@ before_script:
 # use the $DB env variable to determine the phpunit.xml to use
 script:
   - phpunit --configuration phpunit_$DB.xml --coverage-text --verbose
-# virtual display!
-  - xvfb-run --server-args="-screen 0 1024x768x24" make test
 
 # configure notifications (email, IRC, campfire etc)
 notifications:

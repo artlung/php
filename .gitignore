@@ -4,4 +4,5 @@
 .idea/travis-php.iml
 .idea/vcs.xml
 .idea/workspace.xml
-
+composer.lock
+/vendor/
