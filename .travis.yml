@@ -5,6 +5,7 @@ language: php
 php:
   # using major version aliases
   - 7.1
+  - 7.2
   # aliased to a recent hhvm version
   - hhvm
 
@@ -17,7 +18,7 @@ matrix:
   exclude:
     - php: hhvm
   allow_failures:
-#    - php: 7.0
+    - php: 7.2
 #    - php: hhvm
 
 # execute any number of scripts before the test run, custom env's are available as variables
