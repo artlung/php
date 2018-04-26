@@ -7,7 +7,7 @@
 <body>
 <div class="container">
     <h1 id="testHeadline">Lawn Love, yo.</h1>
-    <form action="action.php">
+    <form action="action.php" method="POST">
         <div  class="form-group">
             <label for="username">
                 Username

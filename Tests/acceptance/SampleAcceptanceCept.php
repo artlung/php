@@ -7,4 +7,6 @@ $I->see('Username');
 $I->fillField('username', 'Griswold');
 $I->canSeeElement('#goButton');
 $I->click('#goButton');
-
+$I->seeCurrentUrlEquals("/action.php");
+$I->canSeeElement("#resultElement");
+$I->canSee("Griswold", "#resultElement");
