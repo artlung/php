@@ -6,5 +6,5 @@ $I->amOnPage('/');
 $I->see('Username');
 $I->fillField('username', 'Griswold');
 $I->canSeeElement('#goButton');
-$I->submitForm('#goButton');
+$I->click('#goButton');
 
