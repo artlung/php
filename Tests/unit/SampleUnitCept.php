@@ -1,3 +1,3 @@
 <?php 
 $I = new UnitTester($scenario);
-$I->wantTo('perform actions and see result');
+$I->wantTo('perform unit tests and see result');
