@@ -6,11 +6,7 @@
 
 actor: AcceptanceTester
 modules:
-  enabled:
-      - WebDriver
-  config:
-    WebDriver:
-      browser: chrome
-      port: 4444
-      url: "http://localhost"
-      wait: 1 # seconds
+    enabled:
+        - PhpBrowser:
+            url: http://www.lawnlove.local/
+        - \Helper\Acceptance
