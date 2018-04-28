@@ -39,7 +39,7 @@ before_script:
 #start webserver
   - php -S 127.0.0.1:8000 > /dev/null &
   - sleep 1
-  - chromedriver --url-base=/wd/hub
+  - /usr/local/bin/chromedriver --url-base=/wd/hub
   - sleep 3
 
 
