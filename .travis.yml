@@ -27,6 +27,7 @@ matrix:
 addons:
   apt:
     sources:
+      - libu2f-udev
       - google-chrome
     packages:
       - google-chrome-stable
