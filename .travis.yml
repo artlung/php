@@ -24,6 +24,13 @@ matrix:
     - php: 7.2
 #    - php: hhvm
 
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS lawnlove_crm_test;" -uroot; fi
