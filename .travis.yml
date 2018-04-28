@@ -31,7 +31,7 @@ before_script:
 #start webserver
   - php -S 127.0.0.1:8000 > /dev/null &
   - sleep 1
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - chromedriver --url-base=/wd/hub
   - sleep 3
 
 
