@@ -39,15 +39,15 @@ before_script:
 #start webserver
   - php -S 127.0.0.1:8000 > /dev/null &
   - sleep 1
-  - /usr/local/bin/chromedriver --url-base=/wd/hub
-  - sleep 3
+  - chromedriver --url-base=/wd/hub > /dev/null &
+  - sleep 1
 
 
 install:
-  - composer install
   - export CHROMEDRIVER_VERSION=`curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE`
   - curl -L -O "http://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
   - unzip chromedriver_linux64.zip && chmod +x chromedriver && sudo mv chromedriver /usr/local/bin
+  - composer install
 # use the $DB env variable to determine the phpunit.xml to use
 script:
   - phpunit --configuration phpunit_$DB.xml --coverage-text --verbose
