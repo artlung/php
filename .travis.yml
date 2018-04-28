@@ -27,7 +27,6 @@ matrix:
 addons:
   apt:
     sources:
-      - libu2f-udev
       - google-chrome
     packages:
       - google-chrome-stable
@@ -52,7 +51,7 @@ install:
 script:
   - phpunit --configuration phpunit_$DB.xml --coverage-text --verbose
   # execute codeception tests
-  - php vendor/codeception/codeception/codecept run --debug
+  - php vendor/codeception/codeception/codecept run -vvv
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
