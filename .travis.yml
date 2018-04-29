@@ -49,6 +49,7 @@ install:
   - composer install
 # use the $DB env variable to determine the phpunit.xml to use
 script:
+  - xvfb-run --server-args="-screen 0 1024x768x24" make test
   - phpunit --configuration phpunit_$DB.xml --coverage-text --verbose
   # execute codeception tests
   - php vendor/codeception/codeception/codecept run -vvv
