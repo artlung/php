@@ -32,7 +32,6 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
-      - xvfb
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
