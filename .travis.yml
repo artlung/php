@@ -15,8 +15,6 @@ sudo: true
 # optionally specify a list of environments, for example to test different RDBMS
 env:
   - DB=mysql
-  - DISPLAY=':99.0'
-
 
 # optionally set up exclusions and allowed failures in the matrix
 matrix:
@@ -36,6 +34,7 @@ addons:
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
+  - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS lawnlove_crm_test;" -uroot; fi
