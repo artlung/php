@@ -27,6 +27,7 @@ matrix:
 addons:
   apt:
     sources:
+      - xvfb
       - google-chrome
     packages:
       - google-chrome-stable
@@ -36,6 +37,7 @@ before_script:
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS lawnlove_crm_test;" -uroot; fi
   - if [[ "$DB" == "mysql" ]]; then mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'notroot'@'localhost' IDENTIFIED BY 'localhostpass';" -uroot; fi
 #start webserver
+  - xvfb-run --server-args="-screen 0 1024x768x24" make test
   - php -S 127.0.0.1:8000 > /dev/null &
   - sleep 1
   - chromedriver --url-base=/wd/hub > /dev/null &
@@ -49,7 +51,6 @@ install:
   - composer install
 # use the $DB env variable to determine the phpunit.xml to use
 script:
-  - xvfb-run --server-args="-screen 0 1024x768x24" make test
   - phpunit --configuration phpunit_$DB.xml --coverage-text --verbose
   # execute codeception tests
   - php vendor/codeception/codeception/codecept run -vvv
